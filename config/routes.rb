@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-  get 'users/new'
-
-  get 'users/new'
-
   resources :users
+ 
+  resources :sessions, only: [:new, :create, :destroy]
+  
+  match '/signup',  to: 'users#new',            via: 'get'
+  match '/signin',  to: 'sessions#new',         via: 'get'
+  match '/signout', to: 'sessions#destroy',     via: 'delete'
   
 
   resources :articles do
@@ -11,13 +13,6 @@ Rails.application.routes.draw do
   end 
 
   root 'welcome#index'
-
-  get "users/new"
- 
- 
-  get '/signup',  :to => "users#new"
- 
-  
 
 
 end
