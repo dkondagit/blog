@@ -5,8 +5,15 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.6'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
-
+gem 'factory_girl_rails', '4.2.1'
+gem 'test-unit'
+ gem 'faker'
+gem 'capybara'
 gem 'bootstrap-sass'
+gem 'will_paginate', '~> 3.1.0'
+gem 'rspec-rails', '2.13.1'
+gem 'spork-rails', '4.0.0'
+gem 'childprocess', '0.3.6'
 gem 'bcrypt-ruby', '3.1.2'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'

@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class UserTest < ActiveSupport::TestCase
+class MicropostTest < ActiveSupport::TestCase
   test "should destroy associated microposts" do
       microposts = @user.microposts.to_a
       @user.destroy
@@ -8,5 +8,5 @@ class UserTest < ActiveSupport::TestCase
       microposts.each do |micropost|
         expect(Micropost.where(id: micropost.id)).to be_empty
       end
-    end 
+    end
 end
