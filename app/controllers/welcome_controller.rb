@@ -1,7 +1,8 @@
 class WelcomeController < ApplicationController
   def index
-  end
-  def home
-    @micropost = current_user.microposts.build if signed_in?
-  end
+  
+	    if signed_in?
+	      @micropost  = current_user.microposts.build
+	    end
+	  end
 end

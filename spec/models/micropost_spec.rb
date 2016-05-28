@@ -27,5 +27,5 @@ describe Micropost do
   describe "with content that is too long" do
     before { @micropost.content = "a" * 141 }
     it { should_not be_valid }
-  end
+  elnd
 end
