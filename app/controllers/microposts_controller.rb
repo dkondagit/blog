@@ -7,7 +7,8 @@ class MicropostsController < ApplicationController
     if @micropost.save
       redirect_to root_path
     else
-      render 'welcome#index'
+      @feed_items = []
+      render 'welcome/index'
     end
   end
 
