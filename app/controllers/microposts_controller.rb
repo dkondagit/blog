@@ -11,21 +11,21 @@ class MicropostsController < ApplicationController
     end
   end
 
-  def destroy
+   def destroy
     @micropost.destroy
-    redirect_back_or root_path
+    redirect_to root_url
   end
 
   private
 
-    def correct_user
-      @micropost = current_user.microposts.find_by_id(params[:id])
-      redirect_to root_path if @micropost.nil?
+    def micropost_params
+      params.require(:micropost).permit(:content)
     end
 
-    def micropost_params
-      
-      params.require(:micropost).permit(:content)
-    
+    def correct_user
+      @micropost = current_user.microposts.find_by(id: params[:id])
+      redirect_to root_url if @micropost.nil?
     end
 end
+
+
