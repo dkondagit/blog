@@ -38,14 +38,13 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.4.0)
     arel (6.0.3)
-    autoprefixer-rails (6.3.6.1)
-      execjs
     bcrypt-ruby (3.1.2)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
-    bootstrap-sass (3.3.6)
-      autoprefixer-rails (>= 5.2.1)
-      sass (>= 3.3.4)
+    bootstrap-sass (3.2.0.0)
+      sass (~> 3.2)
+    bootstrap-will_paginate (0.0.5)
+      will_paginate
     builder (3.2.2)
     byebug (9.0.2)
     capybara (2.6.2)
@@ -190,7 +189,8 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt-ruby (= 3.1.2)
-  bootstrap-sass
+  bootstrap-sass (= 3.2.0.0)
+  bootstrap-will_paginate (= 0.0.5)
   byebug
   capybara
   childprocess (= 0.3.6)
@@ -205,6 +205,8 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   spork-rails (= 4.0.0)
   spring
+  sprockets (~> 3.0)
+  sprockets-rails
   sqlite3
   test-unit
   turbolinks
