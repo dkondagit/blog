@@ -19,6 +19,11 @@ gem 'rspec-rails', '2.13.1'
 gem 'spork-rails', '4.0.0'
 gem 'childprocess', '0.3.6'
 gem 'bcrypt-ruby', '3.1.2'
+
+group :production do
+  gem 'pg', '0.15.1'
+  gem 'rails_12factor', '0.0.2'
+end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
