@@ -2,12 +2,13 @@ module SessionsHelper
   def sign_in(user) 
     remember_token = User.new_remember_token
     cookies.permanent[:remember_token] = remember_token
+  #User.update(user.id, :remember_token => User.encrypt(remember_token))
     user.update_attribute(:remember_token, User.encrypt(remember_token))
     self.current_user = user
   end
 
   def signed_in?
-    !current_user.nil?
+    current_user
   end
   
   def current_user
